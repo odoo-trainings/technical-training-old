@@ -15,7 +15,9 @@
     
     'depends': ['base'],
     'data': [],
-    'demo': [],
+    'demo': [
+        'demo/spaceship_demo.xml',
+    ],
     
     'assets': {},
     
