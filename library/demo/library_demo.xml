@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="library.book" id="the_hobbit">
+            <field name="name">The Hobbit</field>
+            <field name="isbn">978-0547928227</field>
+            <field name="summary">
+                In a hole in the ground there lived a hobbit.
+            </field>
+            <field name="format">paperback</field>
+            <field name="author">978-0547928227</field>
+            <field name="edition">4</field>
+            <field name="language">en</field>
+            <field name="publisher">Houghton Mifflin Harcourt</field>
+            <field name="publish_date">2012-08-18</field>
+            <field name="price">11.91</field>
+        </record>
+
+        <record model="library.book" id="the_witcher">
+            <field name="name">The Last Wish: Introducing the Witcher</field>
+            <field name="isbn">978-0547928227</field>
+            <field name="summary">
+                Geralt is a Witcher, a man whose magic powers, enhanced by long training and a mysterious elixir, have made him a brilliant fighter and a mercilessh unter. Yet he is no ordinary killer. His sole purpose: to destroy the monsters that plague the world.
+            </field>
+            <field name="format">hardcover</field>
+            <field name="author">978-0316497541</field>
+            <field name="edition">3</field>
+            <field name="language">en</field>
+            <field name="publisher">Orbit</field>
+            <field name="publish_date">2019-11-12</field>
+            <field name="price">11</field>
+        </record>
+
+        <record model="library.book" id="sapiens">
+            <field name="name">Sapiens. De animales a dioses</field>
+            <field name="isbn">978-0547928227</field>
+            <field name="summary">
+                Este es el fascinante relato de nuestra extraordinaria historia: de simios sin importancia a amos del mundo.Hace 100.000 años, al menos seis especies de humanos habitaban la Tierra. Hoy solo queda una, la nuestra: Homo sapiens.
+            </field>
+            <field name="format">paperback</field>
+            <field name="author">978-8499926223</field>
+            <field name="edition">8</field>
+            <field name="language">es</field>
+            <field name="publisher">Debate</field>
+            <field name="publish_date">2016-09-27</field>
+            <field name="price">17.69</field>
+        </record>
+
+    </data>
+</odoo>
