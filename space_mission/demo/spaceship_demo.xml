@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate='1'>
-        <record id="spaceship_star_destroyer" model="space_mission.spaceship">
-            <field name="type">star_destroyer</field>
-            <field name="model">Imperial I-Class Star Destroyer</field>
-            <field name="capacity_passenger">15000</field>
-            <field name="length">1600</field>
-            <field name="width">550</field>
-            <field name="height">500</field>
-            <field name="weight">352000</field>
+        <record id="spaceship_millennium_falcon" model="space_mission.spaceship">
+            <field name="name">Millennium Falcon</field>
+            <field name="type">freighter</field>
+            <field name="model">Corellian YT-1300 light freighter</field>
+            <field name="captain">Han Solo</field>
+            <field name="build_date" eval="(DateTime.now() - relativedelta(day=2, months=1)).strftime('%Y-%m-%d')"/>
+            <field name="required_crew">4</field>
+            <field name="length">34.52</field>
+            <field name="width">25.61</field>
+            <field name="engine_number">u7jykmhnytu23456</field>
             <field name="fuel_type">solid_fuel</field>
         </record>
-        <record id="spaceship_freighter" model="space_mission.spaceship">
-            <field name="type">freighter</field>
-            <field name="model">Cargo Carrier</field>
-            <field name="capacity_passenger">50</field>
-            <field name="length">410.5</field>
-            <field name="width">380.5</field>
-            <field name="height">5000</field>
-            <field name="weight">3520000</field>
+        <record id="spaceship_x_wing" model="space_mission.spaceship">
+            <field name="name">Millennium Falcon</field>
+            <field name="type">fighter</field>
+            <field name="model">X-Wing Starfighter</field>
+            <field name="captain">Luke Skywalker</field>
+            <field name="build_date" eval="(DateTime.now() - relativedelta(day=2, months=6, years=4)).strftime('%Y-%m-%d')"/>
+            <field name="required_crew">2</field>
+            <field name="length">4.52</field>
+            <field name="width">2.61</field>
+            <field name="engine_number">u7jyp09kopo9m3456</field>
             <field name="fuel_type">liquid_fuel</field>
         </record>
-        <record id="spaceship_x_wing" model="space_mission.spaceship">
-            <field name="type">x_wing</field>
-            <field name="model">X-Wing Starfighter</field>
-            <field name="capacity_passenger">1</field>
-            <field name="length">41.5</field>
-            <field name="width">38.5</field>
-            <field name="height">14.8</field>
-            <field name="weight">7.8</field>
+        <record id="spaceship_transport" model="space_mission.spaceship">
+            <field name="name">Punishing One</field>
+            <field name="type">transport</field>
+            <field name="model">JumpMaster 5000</field>
+            <field name="captain">Dengar</field>
+            <field name="build_date" eval="(DateTime.now() - relativedelta(day=5, months=5, years=2)).strftime('%Y-%m-%d')"/>
+            <field name="required_crew">1</field>
+            <field name="length">4.52</field>
+            <field name="width">2.61</field>
+            <field name="engine_number">u7jyp09kopo9m3456</field>
             <field name="fuel_type">liquid_fuel</field>
         </record>
     </data>
