@@ -1,6 +1,6 @@
 {
     'name': 'Library',
-    'version': '0.1',
+    'version': '0.2',
     'summary': 'Odoo Application to manage its Library',
     'description': """
         Odoo Application to manage its Library:
@@ -15,7 +15,9 @@
     
     'depends': ['base'],
     'data': [],
-    'demo': [],
+    'demo': [
+        'demo/library_demo.xml',
+    ],
     
     'assets': {},
     
