@@ -14,7 +14,7 @@
             <field name="fuel_type">solid_fuel</field>
         </record>
         <record id="spaceship_x_wing" model="space_mission.spaceship">
-            <field name="name">Millennium Falcon</field>
+            <field name="name">X-Wing</field>
             <field name="type">fighter</field>
             <field name="model">X-Wing Starfighter</field>
             <field name="captain">Luke Skywalker</field>

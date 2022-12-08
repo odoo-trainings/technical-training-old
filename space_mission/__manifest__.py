@@ -14,7 +14,13 @@
     'category': 'Tech Training',
     
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/space_mission_groups.xml',
+        'security/space_mission_security.xml',
+        'security/ir.model.access.csv',
+        'data/ir_module_category_data.xml',
+        'views/space_mission_menuitems.xml',
+    ],
     'demo': [
         'demo/spaceship_demo.xml',
     ],
