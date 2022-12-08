@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+            Users Groups
+            Note that the field 'category_id' is set later in
+            base/data/ir_module_category_data.xml
+    -->   
+    <record id="group_space_mission_admin" model="res.groups">
+        <field name="name">Space Mission / Admin</field>
+        <field name="comment">Control all of the features of the Space Mission</field>
+    </record>
+    <record id="group_space_mission_captain" model="res.groups">
+        <field name="name">Captain</field>
+        <field name="comment">Can Create, Read, and Write on the Space Mission App, but not Delete</field>
+    </record>
+    <record id="group_space_mission_crew" model="res.groups">
+        <field name="name">Crewmember</field>
+        <field name="comment">They can only read information from the Space Mission.</field>
+    </record>
+
+</odoo>
