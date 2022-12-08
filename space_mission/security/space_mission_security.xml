@@ -5,13 +5,13 @@
                 Record Rules
                 Note that the field 'category_id' is set later in
                 base/data/ir_module_category_data.xml
-       
+        -->
         <record model="ir.rule" id="spaceship_delete_only_inactive">
             <field name="name">spaceship delete only inactive</field>
             <field name="model_id" ref="model_space_mission_spaceship"/>
             <field name="domain_force">[('active','=', True)]</field>
-            <field name="perm_unlink" eval="False"/>
+            <field name="perm_unlink" eval="0"/>
         </record>
- -->
+
     </data>
 </odoo>
