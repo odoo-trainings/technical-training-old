@@ -37,5 +37,8 @@
             <field name="engine_number">u7jyp09kopo9m3456</field>
             <field name="fuel_type">liquid_fuel</field>
         </record>
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('space_mission.group_space_mission_admin'))]"/>
+        </record>
     </data>
 </odoo>
