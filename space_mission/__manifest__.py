@@ -20,6 +20,7 @@
         'security/ir.model.access.csv',
         'data/ir_module_category_data.xml',
         'views/space_mission_menuitems.xml',
+        'views/spaceship_views.xml',
     ],
     'demo': [
         'demo/spaceship_demo.xml',

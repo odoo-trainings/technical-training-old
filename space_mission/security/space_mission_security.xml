@@ -7,9 +7,12 @@
                 base/data/ir_module_category_data.xml
         -->
         <record model="ir.rule" id="spaceship_delete_only_inactive">
-            <field name="name">spaceship delete only inactive</field>
+            <field name="name">spaceship do not delete active</field>
             <field name="model_id" ref="model_space_mission_spaceship"/>
-            <field name="domain_force">[('active','=', True)]</field>
+            <field name="domain_force">[('active','=', False)]</field>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
             <field name="perm_unlink" eval="0"/>
         </record>
 
