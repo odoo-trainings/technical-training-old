@@ -21,7 +21,7 @@ class ResPartner(models.Model):
     birthdate = fields.Date()
     age = fields.Integer(compute="_compute_age")
     
-    @api.depends('birthday')
+    @api.depends('birthdate')
     def _compute_age(self):
         today = date.today()
         for record in self:
