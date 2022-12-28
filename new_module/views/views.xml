@@ -4,7 +4,7 @@
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="new_module.view_partner_form_inherits">
       <field name="name">new_module_view_partner_form_inherits</field>
-      <field name="model">new_module.res_partner</field>
+      <field name="model">base.res_partner</field>
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
           <field name="email" position="after">            
