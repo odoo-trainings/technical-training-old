@@ -22,5 +22,9 @@
             <field name="description"></field>
             <field name="level">advanced</field>
         </record>
+        <!-- Add Mitchell Admin to Academy Admin Group -->
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('odoo_academy.group_academy_admin'))]"/>
+        </record>
     </data>
 </odoo>

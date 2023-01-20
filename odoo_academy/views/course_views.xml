@@ -9,10 +9,15 @@
                     <h1><field name="name"/></h1>
                     <group>
                         <group>
+                            <separator string="Course Settings"/>
                             <field name="active"/>
+                            <field name="level"/>
                         </group>
                         <group>
-                            <field name="level"/>
+                            <separator string="Price and Fees"/>
+                            <field name="base_price"/>
+                            <field name="additional_fee"/>
+                            <field name="total_price"/>
                         </group>
                     </group>
                     <notebook>
@@ -33,6 +38,9 @@
                 <field name="name"/>
                 <field name="description"/>
                 <field name="level"/>
+                <field name="base_price"/>
+                <field name="additional_fee" optional="hide"/>
+                <field name="total_price"/>
             </tree>
         </field>
     </record>
