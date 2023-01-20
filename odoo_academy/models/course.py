@@ -34,7 +34,7 @@ class Course(models.Model):
                 raise UserError(('Base Price cannot be set as Negative.'))
             record.total_price = record.base_price + record.additional_fee
 
-    # --------------------------------------- Contrains Methods ----------------------------------
+    # --------------------------------------- Constrains Methods ----------------------------------
     @api.constrains('additional_fee')
     def _check_additional_fee(self):
         for record in self:
