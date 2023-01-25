@@ -11,7 +11,7 @@ class Course(models.Model):
     # Reserved Fields
     name = fields.Char(string='Title', required=True)
     active = fields.Boolean(string='Active', default=True)
-   
+    
     # Simple Fields
     description = fields.Text(string='Description')
     level = fields.Selection(string='Level',
@@ -55,9 +55,10 @@ class Course(models.Model):
         for record in self:
             if record.additional_fee < 10.00:
                 raise ValidationError(('Additional Fees cannot be less than 10.00. Current Value: %s' %record.additional_fee)) 
-                
+     
+    # --------------------------------------- Smart Button Action ---------------------------------           
     def action_redirect_sessions(self):
-        action = self.env["ir.actions.actions"]._for_xml_id("odoo_academy.session_view_list")
+        action = self.env["ir.actions.act_window"]._for_xml_id('odoo_academy.session_list_action')
         action['context'] = {
             'default_course_id': self.id
         }
