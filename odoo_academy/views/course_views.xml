@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="course_view_form" model="ir.ui.view">
+        <field name="name">academy.course.form</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <form string="Course Form">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_redirect_sessions" type="object" class="oe_stat_button" icon="fa-television icon">
+                            <div class="o_stat_info">
+                                    <field name="session_count" class="o_stat_value"/>
+                                    <span class="o_stat_text" attrs="{'invisible': [('session_count', '&lt;', 2)]}"> Sessions</span>
+                                    <span class="o_stat_text" attrs="{'invisible': [('session_count', '&gt;', 1)]}"> Session</span>
+                            </div>
+                        </button>
+                    </div>
+                    <h1><field name="name"/></h1>
+                    <group>
+                        <group>
+                            <separator string="Course Settings"/>
+                            <field name="active"/>
+                            <field name="level"/>
+                        </group>
+                        <group>
+                            <separator string="Price and Fees"/>
+                            <field name="base_price"/>
+                            <field name="additional_fee"/>
+                            <field name="total_price"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="course_view_list" model="ir.ui.view">
+        <field name="name">academy.course.list</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <tree string="Course List">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="level"/>
+                <field name="base_price"/>
+                <field name="additional_fee" optional="hide"/>
+                <field name="total_price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="course_view_search" model="ir.ui.view">
+        <field name="name">academy.course.search</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
+    <!-- Add Pivot View -->
+    <record model="ir.ui.view" id="course_view_pivot">
+        <field name="name">academy.course.pivot</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="level" type="row"/>
+                <field name="name" type="row"/>
+                <field name="base_price" type="measure"/>
+                <field name="total_price" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+</odoo> 

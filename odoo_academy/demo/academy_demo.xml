@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Course Demo Data -->
+        <record model="academy.course" id="erp_101">
+            <field name="name">ERP 101</field>
+            <field name="description">Learn ERP Systems</field>
+            <field name="level">beginner</field>
+            <field name="base_price">100.00</field>
+            <field name="additional_fee">10.00</field>
+        </record>
+        <record model="academy.course" id="accounting_200">
+            <field name="name">Accounting 200</field>
+            <field name="description">
+                Accounting 200:
+                Intermediate Accounting Course
+                Learning about Cost Accounting and pricing and Revenue Analysis.
+            </field>
+            <field name="level">intermediate</field>
+            <field name="base_price">410.00</field>
+            <field name="additional_fee">30.00</field>
+        </record>
+        <record model="academy.course" id="website_500">
+            <field name="name">Website 500</field>
+            <field name="description"></field>
+            <field name="level">advanced</field>
+            <field name="base_price">310.00</field>
+            <field name="additional_fee">25.00</field>
+        </record>
+        
+        <!-- Session Demo Data Relational Fields Command Example-->
+        <!-- ResPartner Records can be found in odoo/odoo/addons/base/data/res_partner_demo.xml -->
+        <record model="academy.session" id="session_erp_101_01">
+            <field name="course_id" ref="erp_101"/>
+            <field name="instructor_id" ref="base.res_partner_main1"/>
+            <field name="student_ids" eval="[Command.set([ref('base.res_partner_address_1'), ref('base.res_partner_address_2'), ref('base.res_partner_address_3')])]"/>
+        </record>
+        <record model="academy.session" id="session_erp_101_02">
+            <field name="course_id" ref="erp_101"/>
+            <field name="instructor_id" ref="base.res_partner_main1"/>
+            <field name="student_ids" eval="[Command.set([ref('base.res_partner_address_4'), ref('base.res_partner_address_5'), ref('base.res_partner_address_10'), ref('base.res_partner_address_7')])]"/>
+        </record>
+        <record model="academy.session" id="session_accounting_200">
+            <field name="course_id" ref="accounting_200"/>
+            <field name="instructor_id" ref="base.res_partner_main2"/>
+            <field name="student_ids" eval="[Command.set([ref('base.res_partner_address_13'), ref('base.res_partner_address_2'), ref('base.res_partner_address_11')])]"/>
+        </record>
+        
+        <!-- Add Mitchell Admin to Academy Admin Group -->
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('odoo_academy.group_academy_admin'))]"/>
+        </record>
+    </data>
+</odoo>
