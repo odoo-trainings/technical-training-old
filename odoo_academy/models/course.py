@@ -11,8 +11,7 @@ class Course(models.Model):
     # Reserved Fields
     name = fields.Char(string='Title', required=True)
     active = fields.Boolean(string='Active', default=True)
-    nuevo_campo = fields.Char()
-   
+    
     # Simple Fields
     description = fields.Text(string='Description')
     level = fields.Selection(string='Level',
