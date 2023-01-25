@@ -23,7 +23,7 @@ class Course(models.Model):
     # Fields for Pricing
     additional_fee = fields.Float(string="Additional Fee", digits='Product Price', default=0.00)
     base_price = fields.Float(string='Base Price', digits='Product Price', default=0.00)
-    total_price = fields.Float(string="Total Price", digits='Product Price', compute='_compute_total_price', readonly=True)
+    total_price = fields.Float(string="Total Price", digits='Product Price', compute='_compute_total_price', store=True, readonly=True)
     
     # Relational Fields
     session_ids = fields.One2many(comodel_name='academy.session',
