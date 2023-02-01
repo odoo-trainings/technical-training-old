@@ -24,7 +24,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-
+        'data/data_to_neutralize.xml'
         'views/views.xml',
         'views/templates.xml',
     ],
@@ -32,4 +32,5 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'license': 'OPL-1',
 }
