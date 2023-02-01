@@ -24,7 +24,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'data/data_to_neutralize.xml'
+        'data/data_to_neutralize.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
