@@ -5,13 +5,14 @@ from odoo import models, fields, api
 class Session(models.Model):
     _name = 'academy.session'
     _description = 'Session Info'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string='Title', related='course_id.name')
     course_id = fields.Many2one(comodel_name='academy.course',
                                string='Course',
                                ondelete='cascade',
                                required=True)
-    instructor_id = fields.Many2one(comodel_name='res.partner', string='Instructor')
+    instructor_id = fields.Many2one(comodel_name='res.partner', string='Instructor', tracking=True)
     student_ids = fields.Many2many(comodel_name='res.partner', string='Students')
     
     # Calendar View Fields

@@ -13,7 +13,7 @@
     'website': 'www.odoo.com',
     'category': 'Tech Training',
     
-    'depends': ['base'],
+    'depends': ['mail'],
     'data': [
         'security/odoo_academy_groups.xml',
         'security/odoo_academy_security.xml',

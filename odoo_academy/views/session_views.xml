@@ -24,6 +24,11 @@
                         </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>                    
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
@@ -72,4 +77,21 @@
                 </calendar>
             </field>
         </record>
+    <!-- Activity View -->
+    <record model="ir.ui.view" id="session_view_activity">
+        <field name="name">academy.session.activity</field>
+        <field name="model">academy.session</field>
+        <field name="arch" type="xml">
+            <activity string="Session Activities">
+                <templates>
+                    <div t-name="activity-box">
+                        <div>
+                            <field name="name" display="full"/>
+                            <field name="instructor_id" muted="1" display="full"/>
+                        </div>
+                    </div>
+                </templates>
+            </activity>
+        </field>
+    </record>
 </odoo>
